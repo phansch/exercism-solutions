@@ -16,20 +16,17 @@ fn test_shouting_gibberish() {
 }
 
 #[test]
-#[ignore]
 fn test_asking() {
     assert_eq!("Sure.",
                bob::reply("Does this cryogenic chamber make me look fat?"));
 }
 
 #[test]
-#[ignore]
 fn test_ask_numeric_question() {
     assert_eq!("Sure.", bob::reply("You are, what, like 15?"));
 }
 
 #[test]
-#[ignore]
 fn test_asking_gibberish() {
     assert_eq!("Sure.", bob::reply("fffbbcbeab?"));
 }
@@ -57,13 +54,11 @@ fn test_shouting_numbers() {
 }
 
 #[test]
-#[ignore]
 fn test_only_numbers() {
     assert_eq!("Whatever.", bob::reply("1, 2, 3"));
 }
 
 #[test]
-#[ignore]
 fn test_question_with_only_numbers() {
     assert_eq!("Sure.", bob::reply("4?"));
 }
@@ -85,13 +80,11 @@ fn test_statement_containing_question_mark() {
 }
 
 #[test]
-#[ignore]
 fn test_non_letters_with_question() {
     assert_eq!("Sure.", bob::reply(":) ?"));
 }
 
 #[test]
-#[ignore]
 fn test_prattling_on() {
     assert_eq!("Sure.", bob::reply("Wait! Hang on. Are you going to be OK?"));
 }
@@ -102,45 +95,38 @@ fn test_silence() {
 }
 
 #[test]
-#[ignore]
 fn test_prolonged_silence() {
     assert_eq!("Fine. Be that way!", bob::reply("          "));
 }
 
 #[test]
-#[ignore]
 fn test_alternate_silence() {
     assert_eq!("Fine. Be that way!", bob::reply("\t\t\t\t\t\t\t\t\t\t"));
 }
 
 #[test]
-#[ignore]
 fn test_multiple_line_question() {
     assert_eq!("Whatever.", bob::reply(
         "\nDoes this cryogenic chamber make me look fat?\nno"));
 }
 
 #[test]
-#[ignore]
 fn test_starting_with_whitespace() {
     assert_eq!("Whatever.", bob::reply("         hmmmmmmm..."));
 }
 
 #[test]
-#[ignore]
 fn test_ending_with_whitespace() {
     assert_eq!("Sure.",
                bob::reply("Okay if like my  spacebar  quite a bit?   "));
 }
 
 #[test]
-#[ignore]
 fn test_other_whitespace() {
     assert_eq!("Fine. Be that way!", bob::reply("\n\r \t"));
 }
 
 #[test]
-#[ignore]
 fn test_non_question_ending_with_whitespace() {
     assert_eq!("Whatever.",
                bob::reply("This is a statement ending with whitespace      "));
